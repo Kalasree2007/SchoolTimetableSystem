@@ -1,0 +1,423 @@
+/* =========================================================
+   STUDENT LAYOUT
+   ========================================================= */
+
+.student-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.student-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 300px;
+  height: 100vh;
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.student-brand {
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 28px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.student-brand-logo {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.student-brand-text {
+  margin-left: 14px;
+}
+
+.student-brand-text h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.student-brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.student-menu {
+  flex: 1;
+
+  padding: 28px 18px;
+
+  overflow-y: auto;
+}
+
+.student-menu-title {
+  padding: 0 14px 16px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #94a3b8;
+}
+
+.student-menu-item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 50px;
+
+  padding: 0 14px;
+  margin-bottom: 7px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  color: #334155;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.student-menu-item:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.student-menu-item.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.student-menu-icon {
+  width: 28px;
+
+  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.student-sidebar-bottom {
+  padding: 20px 18px;
+
+  border-top: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+.student-user-card {
+  display: flex;
+  align-items: center;
+
+  padding: 8px 10px 16px;
+}
+
+.student-avatar {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.student-user-info {
+  min-width: 0;
+
+  margin-left: 12px;
+}
+
+.student-user-info strong {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #1e293b;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-user-info span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: #64748b;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.student-logout-button {
+  width: 100%;
+  height: 44px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #fff1f2;
+  color: #dc2626;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.student-logout-button:hover {
+  background: #fee2e2;
+}
+
+.student-logout-button span {
+  margin-right: 8px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT AREA
+   ========================================================= */
+
+.student-main {
+  margin-left: 300px;
+
+  width: calc(100% - 300px);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.student-topbar {
+  position: sticky;
+  top: 0;
+
+  height: 80px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+.student-page-title {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.student-topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.student-notification {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.student-notification:hover {
+  background: #f1f5f9;
+}
+
+.student-top-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+   ========================================================= */
+
+.student-content {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 32px;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .student-sidebar {
+    width: 240px;
+  }
+
+  .student-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+
+  .student-brand {
+    padding: 0 18px;
+  }
+
+  .student-brand-text h2 {
+    font-size: 16px;
+  }
+
+  .student-content {
+    padding: 24px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .student-sidebar {
+    width: 220px;
+  }
+
+  .student-main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .student-content {
+    padding: 20px;
+  }
+
+  .student-topbar {
+    padding: 0 20px;
+  }
+}

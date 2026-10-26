@@ -1,0 +1,668 @@
+/* =====================================================
+   CHILD TIMETABLE PAGE
+   ===================================================== */
+
+.child-timetable-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.child-timetable-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 28px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.child-timetable-label {
+  display: inline-block;
+  margin-bottom: 7px;
+
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.child-timetable-header h1 {
+  margin: 0;
+
+  color: #111827;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.child-timetable-header p {
+  margin: 7px 0 0;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.child-timetable-header-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #eff6ff;
+
+  font-size: 25px;
+}
+
+/* =====================================================
+   CHILD SUMMARY
+   ===================================================== */
+
+.child-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px 24px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.child-summary-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.child-summary-content span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.child-summary-content h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.child-summary-content p {
+  margin: 4px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+/* =====================================================
+   TIMETABLE GRID
+   ===================================================== */
+
+.child-timetable-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* =====================================================
+   DAY CARD
+   ===================================================== */
+
+.child-day-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* =====================================================
+   DAY HEADER
+   ===================================================== */
+
+.child-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  background: #fafbfc;
+
+  border-bottom: 1px solid #eef0f4;
+}
+
+.child-day-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.child-day-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+.child-class-count {
+  min-width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   DAY CONTENT
+   ===================================================== */
+
+.child-day-content {
+  padding: 14px;
+}
+
+/* =====================================================
+   CLASS CARD
+   ===================================================== */
+
+.child-class-card {
+  display: grid;
+
+  grid-template-columns: 85px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #edf0f4;
+
+  border-radius: 11px;
+
+  transition: 0.2s ease;
+}
+
+.child-class-card:last-child {
+  margin-bottom: 0;
+}
+
+.child-class-card:hover {
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+/* =====================================================
+   TIME
+   ===================================================== */
+
+.child-class-time {
+  min-height: 72px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-right: 12px;
+
+  border-right: 1px solid #eef0f4;
+}
+
+.child-class-time strong {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.child-class-time span {
+  margin: 4px 0;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+/* =====================================================
+   CLASS DETAILS
+   ===================================================== */
+
+.child-class-details {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+}
+
+.child-subject-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  font-size: 17px;
+}
+
+.child-class-details h4 {
+  margin: 0 0 6px;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.child-class-details p {
+  margin: 4px 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.child-class-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.child-active,
+.child-inactive {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.child-active {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.child-inactive {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =====================================================
+   NO CLASS
+   ===================================================== */
+
+.child-no-class {
+  min-height: 110px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #9ca3af;
+}
+
+.child-no-class span {
+  margin-bottom: 6px;
+
+  font-size: 22px;
+}
+
+.child-no-class p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+/* =====================================================
+   EMPTY
+   ===================================================== */
+
+.child-timetable-empty {
+  padding: 70px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.child-empty-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+
+  font-size: 27px;
+}
+
+.child-timetable-empty h3 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 18px;
+}
+
+.child-timetable-empty p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.child-timetable-loading {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #6b7280;
+}
+
+.child-timetable-loading h3 {
+  margin: 15px 0 5px;
+
+  color: #374151;
+
+  font-size: 16px;
+}
+
+.child-timetable-loading p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+.child-loading-spinner {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: child-spin 0.8s linear infinite;
+}
+
+@keyframes child-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.child-timetable-error {
+  max-width: 500px;
+
+  margin: 60px auto;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.child-error-icon {
+  margin-bottom: 12px;
+
+  font-size: 35px;
+}
+
+.child-timetable-error h2 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 19px;
+}
+
+.child-timetable-error p {
+  margin: 0 0 20px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.child-retry-button {
+  height: 40px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.child-retry-button:hover {
+  background: #1d4ed8;
+}
+
+/* =====================================================
+   REFRESH
+   ===================================================== */
+
+.child-timetable-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 20px;
+}
+
+.child-refresh-button {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.child-refresh-button:hover {
+  background: #1d4ed8;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .child-timetable-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .child-timetable-page {
+    padding: 20px;
+  }
+
+  .child-timetable-header {
+    padding: 20px;
+  }
+
+  .child-timetable-header h1 {
+    font-size: 22px;
+  }
+
+  .child-timetable-header-icon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 20px;
+  }
+
+  .child-class-card {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .child-class-status {
+    grid-column: 2;
+
+    justify-content: flex-start;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .child-timetable-page {
+    padding: 14px;
+  }
+
+  .child-timetable-header {
+    padding: 16px;
+  }
+
+  .child-timetable-header p {
+    font-size: 12px;
+  }
+
+  .child-summary-card {
+    padding: 16px;
+  }
+
+  .child-day-content {
+    padding: 10px;
+  }
+
+  .child-class-card {
+    padding: 12px;
+  }
+
+}

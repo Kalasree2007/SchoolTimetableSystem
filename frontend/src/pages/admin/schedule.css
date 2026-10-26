@@ -1,0 +1,547 @@
+/* =====================================================
+   PAGE
+===================================================== */
+
+.schedules-page {
+  width: 100%;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.schedules-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.schedules-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 24px;
+}
+
+.schedules-header p {
+  margin: 6px 0 0;
+  color: #8a94a6;
+  font-size: 13px;
+}
+
+.add-schedule-btn {
+  border: none;
+  padding: 11px 17px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-schedule-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.schedule-error {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.schedules-card {
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(16, 24, 40, 0.03);
+  overflow: hidden;
+}
+
+.schedules-card-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.schedules-card-header h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+}
+
+.schedules-card-header span {
+  display: block;
+  margin-top: 5px;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th {
+  padding: 13px 20px;
+  background: #fafbfc;
+  color: #9ca3af;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.schedule-table td {
+  padding: 15px 20px;
+  border-top: 1px solid #f0f1f4;
+  color: #6b7280;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.schedule-date {
+  color: #374151;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   TIMETABLE
+===================================================== */
+
+.timetable-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   REMARKS
+===================================================== */
+
+.schedule-remarks {
+  display: inline-block;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #6b7280;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-scheduled {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-cancelled {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-active {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-inactive {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.schedule-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.schedule-edit-btn,
+.schedule-delete-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.schedule-edit-btn {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.schedule-edit-btn:hover {
+  background: #dbeafe;
+}
+
+.schedule-delete-btn {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.schedule-delete-btn:hover {
+  background: #fee2e2;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.schedule-loading {
+  padding: 60px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.schedule-empty {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.empty-schedule-icon {
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.schedule-empty h3 {
+  margin: 15px 0 5px;
+  color: #374151;
+  font-size: 15px;
+}
+
+.schedule-empty p {
+  margin: 0 0 18px;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.empty-schedule-btn {
+  border: none;
+  padding: 9px 14px;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.empty-schedule-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.schedule-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.schedule-modal {
+  width: 100%;
+  max-width: 500px;
+
+  background: white;
+  border-radius: 13px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.schedule-modal-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 21px;
+
+  border-bottom: 1px solid #eef0f4;
+}
+
+.schedule-modal-header h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+}
+
+.schedule-modal-header p {
+  margin: 5px 0 0;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.schedule-close-btn {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  background: #f3f4f6;
+
+  border-radius: 6px;
+
+  color: #6b7280;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.schedule-close-btn:hover {
+  background: #e5e7eb;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.schedule-modal form {
+  padding: 21px;
+}
+
+.schedule-form-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.schedule-form-group label {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #374151;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.schedule-form-group input,
+.schedule-form-group select,
+.schedule-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 7px;
+
+  padding: 10px 11px;
+
+  outline: none;
+
+  color: #374151;
+  font-size: 12px;
+  font-family: inherit;
+}
+
+.schedule-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.schedule-form-group input:focus,
+.schedule-form-group select:focus,
+.schedule-form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =====================================================
+   REMARKS COUNTER
+===================================================== */
+
+.remarks-counter {
+  display: block;
+  margin-top: 4px;
+
+  text-align: right;
+
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.schedule-checkbox-group {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 13px;
+}
+
+.schedule-checkbox-group input {
+  width: 15px;
+  height: 15px;
+
+  cursor: pointer;
+}
+
+.schedule-checkbox-group label {
+  color: #374151;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   MODAL BUTTONS
+===================================================== */
+
+.schedule-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding-top: 8px;
+}
+
+.schedule-cancel-btn,
+.schedule-save-btn {
+  padding: 10px 15px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.schedule-cancel-btn {
+  border: 1px solid #dfe3e8;
+  background: white;
+  color: #6b7280;
+}
+
+.schedule-cancel-btn:hover {
+  background: #f9fafb;
+}
+
+.schedule-save-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.schedule-save-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .schedules-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .schedule-table {
+    min-width: 950px;
+  }
+
+  .schedule-modal {
+    max-width: 100%;
+  }
+
+}

@@ -1,0 +1,393 @@
+/* =========================================================
+   TEACHER TIMETABLE PAGE
+   ========================================================= */
+
+.teacher-timetable-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f6f8fc;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.teacher-timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.teacher-timetable-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.teacher-timetable-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.teacher-timetable-header strong {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   CALENDAR ICON
+   ========================================================= */
+
+.timetable-calendar-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.teacher-timetable-loading {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.teacher-timetable-error {
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.timetable-error-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.teacher-timetable-error h3 {
+  margin: 0 0 10px;
+  color: #b91c1c;
+  font-size: 20px;
+}
+
+.teacher-timetable-error p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   EMPTY TIMETABLE
+   ========================================================= */
+
+.teacher-timetable-empty {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.timetable-empty-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.teacher-timetable-empty h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  color: #1f2937;
+}
+
+.teacher-timetable-empty p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   WEEKLY GRID
+   ========================================================= */
+
+.teacher-timetable-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(180px, 1fr));
+  gap: 14px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   DAY CARD
+   ========================================================= */
+
+.teacher-day-card {
+  min-width: 180px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   DAY HEADER
+   ========================================================= */
+
+.teacher-day-header {
+  padding: 17px 15px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.teacher-day-header h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.teacher-day-header span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   DAY CONTENT
+   ========================================================= */
+
+.teacher-day-content {
+  padding: 12px;
+  min-height: 180px;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   NO CLASS
+   ========================================================= */
+
+.teacher-no-class {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   CLASS CARD
+   ========================================================= */
+
+.teacher-class-card {
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.teacher-class-card:last-child {
+  margin-bottom: 0;
+}
+
+.teacher-class-card:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   CLASS TIME
+   ========================================================= */
+
+.teacher-class-time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.teacher-class-time strong {
+  font-size: 13px;
+  color: #2563eb;
+}
+
+.teacher-class-time span {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CLASS DETAILS
+   ========================================================= */
+
+.teacher-class-details h4 {
+  margin: 0 0 9px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.teacher-class-details p {
+  margin: 6px 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.teacher-class-status {
+  margin-top: 12px;
+}
+
+.active-status,
+.inactive-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.active-status {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.inactive-status {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1400px) {
+
+  .teacher-timetable-grid {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 1000px) {
+
+  .teacher-timetable-page {
+    padding: 20px;
+  }
+
+  .teacher-timetable-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .teacher-timetable-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .timetable-calendar-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .teacher-timetable-grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .teacher-timetable-page {
+    padding: 15px;
+  }
+
+  .teacher-timetable-header {
+    padding: 20px;
+  }
+
+  .teacher-timetable-header h2 {
+    font-size: 23px;
+  }
+
+  .teacher-timetable-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-day-card {
+    min-width: 100%;
+  }
+
+}

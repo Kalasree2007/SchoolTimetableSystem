@@ -1,0 +1,630 @@
+/* =========================================
+   CLASS MANAGEMENT PAGE
+========================================= */
+
+.class-page {
+  padding: 55px 70px;
+  min-height: calc(100vh - 70px);
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.class-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.class-header h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+}
+
+.class-header p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* =========================================
+   ADD CLASS BUTTON
+========================================= */
+
+.add-class-button {
+  height: 48px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.add-class-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+}
+
+.add-class-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.class-message {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+  color: #1d4ed8;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.class-form-card {
+  margin-bottom: 30px;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.class-form-card h2 {
+  margin: 0 0 25px;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.class-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group input:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   ACTIVE CHECKBOX
+========================================= */
+
+.class-active {
+  margin-top: 22px;
+}
+
+.class-active label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+
+  cursor: pointer;
+}
+
+.class-active input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.class-form-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+/* SAVE / UPDATE */
+
+.save-class-button {
+  height: 42px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.save-class-button:hover {
+  background: #1d4ed8;
+}
+
+.save-class-button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* CANCEL */
+
+.cancel-button {
+  height: 42px;
+
+  padding: 0 20px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: #f9fafb;
+}
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.class-table-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.class-table-header {
+  min-height: 100px;
+
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.class-table-header h2 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.refresh-button {
+  height: 44px;
+
+  padding: 0 20px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container table {
+  width: 100%;
+  min-width: 1050px;
+
+  border-collapse: collapse;
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.table-container th {
+  height: 60px;
+
+  padding: 0 22px;
+
+  background: #f9fafb;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.table-container td {
+  height: 72px;
+
+  padding: 12px 22px;
+
+  border-bottom: 1px solid #eef0f4;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+
+  vertical-align: middle;
+}
+
+.table-container tbody tr {
+  transition: background 0.15s ease;
+}
+
+.table-container tbody tr:hover {
+  background: #fafbfc;
+}
+
+.table-container tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   CLASS NAME
+========================================= */
+
+.table-container td:nth-child(3) {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-active,
+.status-inactive {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+
+  height: 26px;
+
+  padding: 0 12px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-active {
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.status-inactive {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.action-buttons button {
+  height: 36px;
+
+  padding: 0 15px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* =========================================
+   EDIT
+========================================= */
+
+.edit-button {
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.edit-button:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+/* =========================================
+   DELETE
+========================================= */
+
+.delete-button {
+  border: 1px solid #fecaca;
+
+  background: #fff7f7;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/* =========================================
+   DISABLED ACTION BUTTONS
+========================================= */
+
+.action-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING / EMPTY
+========================================= */
+
+.class-loading,
+.class-empty {
+  margin: 0;
+
+  padding: 55px 20px;
+
+  text-align: center;
+
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.class-loading {
+  color: #2563eb;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .class-page {
+    padding: 40px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .class-page {
+    padding: 35px 25px;
+  }
+
+  .class-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-header h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .class-page {
+    padding: 25px 15px;
+  }
+
+  .class-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .add-class-button {
+    width: 100%;
+  }
+
+  .class-header h1 {
+    font-size: 24px;
+  }
+
+  .class-header p {
+    font-size: 14px;
+  }
+
+  .class-form-card {
+    padding: 20px;
+  }
+
+  .class-table-header {
+    min-height: 85px;
+    padding: 0 18px;
+  }
+
+  .class-table-header h2 {
+    font-size: 19px;
+  }
+
+  .refresh-button {
+    height: 40px;
+    padding: 0 15px;
+  }
+
+  .class-form-buttons {
+    flex-wrap: wrap;
+  }
+}

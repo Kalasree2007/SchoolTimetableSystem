@@ -1,0 +1,567 @@
+/* =========================================================
+   TEACHER LAYOUT
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.teacher-layout {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #f7f8fa;
+  color: #111827;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.teacher-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 245px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #e7eaf0;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.teacher-sidebar-brand {
+  height: 72px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  border-bottom: 1px solid #eef0f4;
+  flex-shrink: 0;
+}
+
+.teacher-sidebar-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.teacher-sidebar-brand h2 {
+  margin: 0;
+
+  color: #111827;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.teacher-sidebar-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.teacher-sidebar-nav {
+  flex: 1;
+
+  padding: 22px 13px;
+
+  overflow-y: auto;
+}
+
+.teacher-nav-title {
+  margin: 0 10px 10px;
+
+  color: #b0b7c3;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.teacher-nav-link {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 4px;
+  padding: 10px 11px;
+
+  border-radius: 7px;
+
+  color: #6b7280;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.teacher-nav-link span:first-child {
+  width: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+
+  font-size: 14px;
+}
+
+.teacher-nav-link:hover {
+  background: #f3f6fb;
+  color: #2563eb;
+}
+
+.teacher-nav-link.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.teacher-sidebar-bottom {
+  padding: 15px;
+
+  border-top: 1px solid #eef0f4;
+
+  flex-shrink: 0;
+}
+
+.teacher-sidebar-user {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 12px;
+}
+
+.teacher-sidebar-avatar {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.teacher-sidebar-user strong {
+  display: block;
+
+  max-width: 155px;
+
+  overflow: hidden;
+
+  color: #374151;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacher-sidebar-user span {
+  display: block;
+
+  max-width: 155px;
+
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #9ca3af;
+
+  font-size: 8px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.teacher-logout-btn {
+  width: 100%;
+
+  padding: 9px;
+
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.teacher-logout-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+
+/* =========================================================
+   MAIN AREA
+   ========================================================= */
+
+.teacher-main {
+  width: calc(100% - 245px);
+
+  min-height: 100vh;
+
+  margin-left: 245px;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.teacher-topbar {
+  width: 100%;
+  height: 72px;
+
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e7eaf0;
+}
+
+.teacher-topbar > div:first-child span {
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TOPBAR RIGHT
+   ========================================================= */
+
+.teacher-topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.teacher-notification {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.teacher-notification:hover {
+  background: #f1f5f9;
+}
+
+.teacher-topbar-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teacher-topbar-user strong {
+  display: block;
+
+  max-width: 130px;
+
+  overflow: hidden;
+
+  color: #374151;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacher-topbar-user span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9ca3af;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.teacher-content {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+
+  padding: 28px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.teacher-sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.teacher-sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.teacher-sidebar-nav::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .teacher-sidebar {
+    width: 220px;
+  }
+
+  .teacher-main {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+  }
+
+  .teacher-content {
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .teacher-sidebar {
+    width: 70px;
+  }
+
+  .teacher-main {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  .teacher-sidebar-brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .teacher-sidebar-brand > div:last-child {
+    display: none;
+  }
+
+  .teacher-sidebar-nav {
+    padding: 18px 8px;
+  }
+
+  .teacher-nav-title {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    font-size: 0;
+  }
+
+  .teacher-nav-title::after {
+    content: "•";
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+  }
+
+  .teacher-nav-link {
+    justify-content: center;
+
+    padding: 11px 5px;
+  }
+
+  .teacher-nav-link span:first-child {
+    font-size: 15px;
+  }
+
+  .teacher-nav-link span:last-child {
+    display: none;
+  }
+
+  .teacher-sidebar-bottom {
+    padding: 10px 7px;
+  }
+
+  .teacher-sidebar-user {
+    justify-content: center;
+  }
+
+  .teacher-sidebar-user > div:last-child {
+    display: none;
+  }
+
+  .teacher-logout-btn {
+    height: 35px;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .teacher-logout-btn::after {
+    content: "↪";
+
+    font-size: 15px;
+  }
+
+  .teacher-topbar {
+    padding: 0 18px;
+  }
+
+  .teacher-topbar-user {
+    display: none;
+  }
+
+  .teacher-content {
+    padding: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .teacher-sidebar {
+    width: 60px;
+  }
+
+  .teacher-main {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+
+  .teacher-sidebar-logo {
+    width: 34px;
+    height: 34px;
+
+    font-size: 11px;
+  }
+
+  .teacher-topbar {
+    height: 64px;
+  }
+
+  .teacher-content {
+    padding: 14px;
+  }
+
+}

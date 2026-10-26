@@ -1,0 +1,506 @@
+/* =====================================================
+   STUDENT TIMETABLE PAGE
+   ===================================================== */
+
+.student-timetable-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.student-timetable-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.student-timetable-label {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+
+.student-timetable-header h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.student-timetable-header p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.student-timetable-header p + p {
+  margin-top: 4px;
+}
+
+.student-timetable-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  font-size: 25px;
+}
+
+/* =====================================================
+   TIMETABLE GRID
+   ===================================================== */
+
+.student-timetable-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* =====================================================
+   DAY CARD
+   ===================================================== */
+
+.student-day-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* =====================================================
+   DAY HEADER
+   ===================================================== */
+
+.student-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: #fafbfc;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.student-day-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.student-day-header span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.student-class-count {
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   DAY CONTENT
+   ===================================================== */
+
+.student-day-content {
+  padding: 14px;
+}
+
+/* =====================================================
+   CLASS CARD
+   ===================================================== */
+
+.student-class-card {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #edf0f4;
+  border-radius: 11px;
+  transition: 0.2s ease;
+}
+
+.student-class-card:last-child {
+  margin-bottom: 0;
+}
+
+.student-class-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+/* =====================================================
+   TIME
+   ===================================================== */
+
+.student-class-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75px;
+  padding-right: 14px;
+  border-right: 1px solid #eef0f4;
+}
+
+.time-start,
+.time-end {
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.time-end {
+  margin-top: 5px;
+}
+
+.time-line {
+  position: relative;
+  width: 2px;
+  height: 12px;
+  margin: 3px 0;
+  background: #bfdbfe;
+}
+
+.time-line span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* =====================================================
+   CLASS DETAILS
+   ===================================================== */
+
+.student-class-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.student-subject-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #eff6ff;
+  font-size: 18px;
+}
+
+.student-class-details h4 {
+  margin: 0 0 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.student-class-details p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.student-class-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.student-active-status,
+.student-inactive-status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.student-active-status {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.student-inactive-status {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =====================================================
+   NO CLASS
+   ===================================================== */
+
+.student-no-class {
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.student-no-class span {
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+
+.student-no-class p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* =====================================================
+   EMPTY
+   ===================================================== */
+
+.student-timetable-empty {
+  padding: 70px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.student-empty-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eff6ff;
+  font-size: 27px;
+}
+
+.student-timetable-empty h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.student-timetable-empty p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.student-timetable-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.student-timetable-error {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.student-error-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.student-timetable-error h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.student-timetable-error p {
+  margin: 0 0 20px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.student-timetable-error button {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-timetable-error button:hover {
+  background: #1d4ed8;
+}
+
+/* =====================================================
+   REFRESH BUTTON
+   ===================================================== */
+
+.student-timetable-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.student-refresh-button {
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.student-refresh-button:hover {
+  background: #1d4ed8;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .student-timetable-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .student-timetable-page {
+    padding: 20px;
+  }
+
+  .student-timetable-header {
+    padding: 20px;
+  }
+
+  .student-timetable-header h2 {
+    font-size: 22px;
+  }
+
+  .student-timetable-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .student-class-card {
+    grid-template-columns: 70px 1fr;
+    gap: 12px;
+  }
+
+  .student-class-status {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+
+  .student-class-time {
+    padding-right: 10px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .student-timetable-page {
+    padding: 14px;
+  }
+
+  .student-timetable-header {
+    padding: 16px;
+  }
+
+  .student-timetable-header p {
+    font-size: 12px;
+  }
+
+  .student-timetable-grid {
+    gap: 14px;
+  }
+
+  .student-day-header {
+    padding: 15px;
+  }
+
+  .student-day-content {
+    padding: 10px;
+  }
+
+  .student-class-card {
+    padding: 12px;
+  }
+
+  .student-class-details {
+    gap: 8px;
+  }
+
+  .student-subject-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+}
